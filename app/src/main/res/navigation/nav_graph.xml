@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/spaceCraftFragment">
+
+    <fragment
+        android:id="@+id/spaceCraftFragment"
+        android:name="com.wt.spacepokemon.SpaceCraftFragment"
+        android:label="space_craft_fragment"
+        tools:layout="@layout/space_craft_fragment">
+        <action
+            android:id="@+id/action_spaceCraftFragment_to_pokemonListFragment"
+            app:destination="@id/pokemonListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pokemonListFragment"
+        android:name="com.wt.spacepokemon.PokemonListFragment"
+        android:label="pokemon_list_fragment"
+        tools:layout="@layout/pokemon_list_fragment">
+        <action
+            android:id="@+id/action_pokemonListFragment_to_pokemonDetailFragment"
+            app:destination="@id/pokemonDetailFragment" />
+        <argument
+            android:name="craftName"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/pokemonDetailFragment"
+        android:name="com.wt.spacepokemon.PokemonDetailFragment"
+        android:label="pokemon_detail_fragment"
+        tools:layout="@layout/pokemon_detail_fragment">
+        <argument
+            android:name="id"
+            app:argType="integer" />
+    </fragment>
+</navigation>

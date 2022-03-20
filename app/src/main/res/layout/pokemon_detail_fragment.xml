@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/global_bg"
+    tools:context=".PokemonDetailFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/ic_back"
+        app:titleTextColor="@color/white" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="20dp"
+        android:background="@drawable/shape_detail_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/my_toolbar">
+
+        <TextView
+            android:id="@+id/tv_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/gray"
+            android:textSize="20sp"
+            app:drawableStartCompat="@drawable/ic_sharp_symbol"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="001" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Bulbasaur" />
+
+        <ImageView
+            android:id="@+id/iv_avatar"
+            android:layout_width="@dimen/detail_avatar_size"
+            android:layout_height="@dimen/detail_avatar_size"
+            android:layout_marginTop="28dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_name"
+            tools:src="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/tv_basic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/detail_type_label_margin_start"
+            android:layout_marginTop="@dimen/detail_item_margin_top"
+            android:text="@string/str_basic_title"
+            android:textColor="@color/color_blue"
+            android:textSize="@dimen/detail_type_label_text_size"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_avatar" />
+
+
+        <TextView
+            android:id="@+id/tv_height_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/detail_item_margin_top"
+            android:drawablePadding="@dimen/detail_item_drawable_padding"
+            android:text="@string/str_height_label"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/detail_item_text_size"
+            app:drawableStartCompat="@drawable/ic_height"
+            app:layout_constraintStart_toStartOf="@+id/tv_basic"
+            app:layout_constraintTop_toBottomOf="@+id/tv_basic" />
+
+        <TextView
+            android:id="@+id/tv_height"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/detail_value_margin_start"
+            android:textColor="@color/black"
+            android:textSize="@dimen/detail_item_text_size"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_height_label"
+            app:layout_constraintStart_toEndOf="@+id/tv_height_label"
+            app:layout_constraintTop_toTopOf="@+id/tv_height_label"
+            tools:text="0.71 m" />
+
+        <TextView
+            android:id="@+id/tv_weight_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/detail_item_margin_top"
+            android:drawablePadding="@dimen/detail_item_drawable_padding"
+            android:text="@string/str_weight_label"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/detail_item_text_size"
+            app:drawableStartCompat="@drawable/ic_weight"
+            app:layout_constraintStart_toStartOf="@+id/tv_height_label"
+            app:layout_constraintTop_toBottomOf="@+id/tv_height_label" />
+
+        <TextView
+            android:id="@+id/tv_weight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/detail_value_margin_start"
+            android:layout_marginTop="@dimen/detail_item_margin_top"
+            android:textColor="@color/black"
+            android:textSize="@dimen/detail_item_text_size"
+            app:layout_constraintStart_toEndOf="@id/tv_weight_label"
+            app:layout_constraintTop_toBottomOf="@+id/tv_height_label"
+            tools:text="6.9 kg" />
+
+        <TextView
+            android:id="@+id/tv_candy_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/detail_item_margin_top"
+            android:drawablePadding="@dimen/detail_item_drawable_padding"
+            android:text="@string/str_candy_label"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/detail_item_text_size"
+            app:drawableStartCompat="@drawable/ic_candy"
+            app:layout_constraintStart_toStartOf="@+id/tv_weight_label"
+            app:layout_constraintTop_toBottomOf="@+id/tv_weight_label" />
+
+        <TextView
+            android:id="@+id/tv_candy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/detail_value_margin_start"
+            android:layout_marginTop="@dimen/detail_item_margin_top"
+            android:drawablePadding="@dimen/detail_item_drawable_padding"
+            android:textColor="@color/black"
+            android:textSize="@dimen/detail_item_text_size"
+            app:layout_constraintStart_toEndOf="@id/tv_candy_label"
+            app:layout_constraintTop_toBottomOf="@id/tv_weight_label"
+            tools:text="Bulbasaur Candy" />
+
+        <TextView
+            android:id="@+id/tv_candy_count_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/detail_item_margin_top"
+            android:drawablePadding="@dimen/detail_item_drawable_padding"
+            android:text="@string/str_candy_count_label"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/detail_item_text_size"
+            app:drawableStartCompat="@drawable/ic_candy_count"
+            app:layout_constraintStart_toStartOf="@+id/tv_candy_label"
+            app:layout_constraintTop_toBottomOf="@+id/tv_candy_label" />
+
+        <TextView
+            android:id="@+id/tv_candy_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/detail_value_margin_start"
+            android:layout_marginTop="@dimen/detail_item_margin_top"
+            android:drawablePadding="@dimen/detail_item_drawable_padding"
+            android:textColor="@color/black"
+            android:textSize="@dimen/detail_item_text_size"
+            app:layout_constraintStart_toEndOf="@id/tv_candy_count_label"
+            app:layout_constraintTop_toBottomOf="@id/tv_candy_label"
+            tools:text="50" />
+
+        <TextView
+            android:id="@+id/tv_type_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/detail_type_label_margin_start"
+            android:layout_marginTop="@dimen/detail_item_margin_top"
+            android:text="@string/str_type_title"
+            android:textColor="@color/color_orange"
+            android:textSize="@dimen/detail_type_label_text_size"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_candy_count_label" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_type_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/detail_type_label_margin_start"
+            android:layout_marginTop="@dimen/detail_item_margin_top"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_type_label" />
+
+        <TextView
+            android:id="@+id/tv_weakness_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/detail_type_label_margin_start"
+            android:layout_marginTop="@dimen/detail_item_margin_top"
+            android:text="@string/str_weakness_title"
+            android:textColor="@color/color_green"
+            android:textSize="@dimen/detail_type_label_text_size"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rv_type_list" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_weakness_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/detail_type_label_margin_start"
+            android:layout_marginTop="@dimen/detail_item_margin_top"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_weakness_label" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

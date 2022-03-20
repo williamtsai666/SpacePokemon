@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">PokemonSpace</string>
+    <string name="title_space_craft">Pokemon Craft</string>
+    <string name="title_pokemon_list">Welcome To\u0020</string>
+    <string name="str_basic_title">Basic</string>
+    <string name="str_height_label">Height:</string>
+    <string name="str_weight_label">Weight:</string>
+    <string name="str_candy_label">Candy:</string>
+    <string name="str_candy_count_label">Count:</string>
+    <string name="str_type_title">Type</string>
+    <string name="str_weakness_title">Weakness</string>
+</resources>
