@@ -4,29 +4,29 @@ A pokemon app base on MVVM architecture with Android Jetpack.
 
 This repository is a interview project with specified data source to display pokemon list in Android.
 
-## Libraries Used
+## Tech Stack
 
 Kotlin with coroutine
 
-Hilt - dependency injection
+Hilt - Dependency injection
 
-Jetpack components
+Android Jetpack components
 
-- Lifecycles 
+- Lifecycles -  Holds the information about the lifecycle state of a component (like an activity or a fragment) and allows other objects to observe this state.
 
-- LiveData
+- LiveData - Build data objects that notify views when the underlying data changes.
 
-- ViewModel
+- ViewModel -  Store and manage UI-related data in a lifecycle conscious way.
 
-- ViewBinding 
+- ViewBinding - Easy to find views and interacts with views
 
-- Room
+- Room - Access app's SQLite database with in-app objects and compile-time checks.
 
-- Navigation 
+- Navigation - Navigation between Activity/Fragment
 
-Glide - image loading
+Glide - Image loading
 
-OkHttp - baisc http/https request client
+OkHttp - Baisc http/https request client
 
 ## Screenshots
 
@@ -40,7 +40,7 @@ OkHttp - baisc http/https request client
 
 Logic optimize
 
-Show loading status when network or db operation for user
+...
 
 ## Reference
 
